@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
     # convert VCF to Mutation Types
     start_time = time.time()
-    header = "/FFPEsig/src/Mut-Type-Header.csv"
+    header = "/FFPEsig/data/Mut-Type-Header.csv"
     mut_df = df2mut(vcf_df, header, seq_list, sample_name)
 
     print("--- %s seconds to make Mutation Type Data Frame ---" %
