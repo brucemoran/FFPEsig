@@ -1,0 +1,7 @@
+argparse
+Bio
+matplotlib
+numpy
+pandas
+scikit-allel
+seaborn
