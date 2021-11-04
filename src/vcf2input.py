@@ -94,10 +94,6 @@ def df2mut(tmp1, header, seq_list, sample_name):
         if(not ref == ref_base):
             print("Mismatch in VCF and fasta genome versions, please ensure they are the same\n")
             print(ch, ":", st, "_", ref, "-", ref_base, "..", ref_cont)
-        if (re.search('[GT]', ref)):
-            ref = reverse_complement(ref)
-            ref_cont = reverse_complement(ref_cont)
-            alt = reverse_complement(alt)
         change_tri = ref_cont + ".." + ref_cont[0] + alt + ref_cont[2]
         changes.append(change_tri)
     mutdf_tmp = pd.DataFrame({"MutationType": pd.Series(
